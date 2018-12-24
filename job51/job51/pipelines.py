@@ -10,12 +10,13 @@ import csv
 import pymongo
 
 
+# 以CSV文件存入
 class Job51Pipeline(object):
     def __init__(self):
         self.csvwriter = csv.writer(open("51job.csv", "a", encoding='utf-8', newline=''), delimiter=',')
-        self.csvwriter.writerow(["position_name", "company", "address", "salary", "time"])
+        self.csvwriter.writerow(["position_name", "company", "address", "salary", "time"])  # 指定列名
 
-    # json
+    # 以json文件存入
     # def process_item(self, item, spider):
     #     with open('51job.json', 'a') as f:
     #         json.dump(dict(item), f, ensure_ascii=False)
@@ -28,11 +29,12 @@ class Job51Pipeline(object):
         return item
 
 
+# 存入MongoDB
 class MongoPipeline(object):
     def __init__(self):
         client = pymongo.MongoClient('127.0.0.1', 27017)
-        db = client['51Job_db']
-        self.post = db['51job']
+        db = client['51Job_db']  # 指定库 （自动创建）
+        self.post = db['51job']  # 指定表 （自定创建）
 
     def process_item(self, item, spider):
         postItem = dict(item)

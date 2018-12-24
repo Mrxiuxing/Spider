@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff573baf-243f-469d-9035-f426170cfb45" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/51job.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/job51/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/job51/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job51/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/job51/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,35 +11,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/job51/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="332">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#208#218#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/job51/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job51/spiders/JobSpider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,15 +35,14 @@
         <option value="$PROJECT_DIR$/51job.json" />
         <option value="$PROJECT_DIR$/job51/items.py" />
         <option value="$PROJECT_DIR$/job51/spiders/JobSpider.py" />
-        <option value="$PROJECT_DIR$/job51/pipelines.py" />
         <option value="$PROJECT_DIR$/job51/settings.py" />
+        <option value="$PROJECT_DIR$/job51/pipelines.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2" />
-    <option name="y" value="2" />
-    <option name="width" value="998" />
+    <option name="x" value="935" />
+    <option name="width" value="999" />
     <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -76,8 +51,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="job51" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job51" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job51" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job51" type="462c0819:PsiDirectoryNode" />
+              <item name="job51" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -117,16 +107,18 @@
       <workItem from="1545381887485" duration="712000" />
       <workItem from="1545382688796" duration="924000" />
       <workItem from="1545617588801" duration="979000" />
+      <workItem from="1545619052462" duration="234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25612000" />
+    <option name="totallyTimeSpent" value="25846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.308311" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17426273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -214,13 +206,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job51/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/51job.csv" />
+    <entry file="file://$PROJECT_DIR$/job51/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="e#208#218#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="67" column="40" lean-forward="true" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -234,15 +224,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/51job.csv">
+    <entry file="file://$PROJECT_DIR$/job51/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-213118" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job51/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state relative-caret-position="332">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#208#218#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
