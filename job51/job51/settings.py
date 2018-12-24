@@ -45,9 +45,9 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 16
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-   'job51.middlewares.Job51SpiderMiddleware': 543,
-}
+# SPIDER_MIDDLEWARES = {
+#    'job51.middlewares.Job51SpiderMiddleware': 543,
+# }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
@@ -65,6 +65,8 @@ SPIDER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'job51.pipelines.Job51Pipeline': 300,
+   'job51.pipelines.MongoPipeline': 301,
+
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

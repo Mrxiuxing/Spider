@@ -7,6 +7,7 @@
 
 # import json
 import csv
+import pymongo
 
 
 class Job51Pipeline(object):
@@ -24,4 +25,16 @@ class Job51Pipeline(object):
     # CSV
     def process_item(self, item, spider):
         self.csvwriter.writerow((item["position_name"], item["company"], item["address"], item["salary"], item["time"]))
+        return item
+
+
+class MongoPipeline(object):
+    def __init__(self):
+        client = pymongo.MongoClient('127.0.0.1', 27017)
+        db = client['51Job_db']
+        self.post = db['51job']
+
+    def process_item(self, item, spider):
+        postItem = dict(item)
+        self.post.insert(postItem)
         return item
