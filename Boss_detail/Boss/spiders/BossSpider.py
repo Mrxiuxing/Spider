@@ -1,7 +1,7 @@
 import time
 import random
 import scrapy
-from Boos.items import BoosItem
+from Boss.items import BossItem
 
 
 class JobSpider(scrapy.Spider):
@@ -22,7 +22,7 @@ class JobSpider(scrapy.Spider):
             time.sleep(random.uniform(5, 10))
 
     def parse_detail(self, response):
-        item = BoosItem()
+        item = BossItem()
         try:
             item['position_name'] = response.xpath('//div[@class="name"]/h1/text()').extract_first()
             item['city'] = response.xpath('//div[1]/div/div/div[2]/p/text()[1]').extract_first()[3:]

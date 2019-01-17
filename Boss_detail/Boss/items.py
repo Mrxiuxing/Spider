@@ -8,7 +8,7 @@
 import scrapy
 
 
-class BoosItem(scrapy.Item):
+class BossItem(scrapy.Item):
     position_name = scrapy.Field()  # 职位名称
     city = scrapy.Field()  # 城市
     experience = scrapy.Field()  # 经验

@@ -9,10 +9,10 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Boos'
+BOT_NAME = 'Boss'
 
-SPIDER_MODULES = ['Boos.spiders']
-NEWSPIDER_MODULE = 'Boos.spiders'
+SPIDER_MODULES = ['Boss.spiders']
+NEWSPIDER_MODULE = 'Boss.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36'
@@ -46,13 +46,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'Boos.middlewares.BoosSpiderMiddleware': 543,
+#    'Boos.middlewares.BossSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'Boos.middlewares.BoosDownloaderMiddleware': 543,
+#    'Boos.middlewares.BossDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'Boos.pipelines.CSVPipeline': 300,
-    # 'Boos.pipelines.JSONPipeline': 301,
-    # 'Boos.pipelines.MongoPipeline': 302,
+    'Boss.pipelines.CSVPipeline': 300,
+    # 'Boss.pipelines.JSONPipeline': 301,
+    # 'Boss.pipelines.MongoPipeline': 302,
 
 }
 
