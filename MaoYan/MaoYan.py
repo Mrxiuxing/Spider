@@ -59,10 +59,11 @@ def write_to_csvField(filename):
 def write_to_csvRows(content, filename):
     with open("MovieTop100.csv", 'a', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, filename)
+        # writer.writeheader()    # 在抓取多页面时会造成表头重复
         writer.writerows(content)
 
 
-def main(offset, csv_title):
+def main(offset, fieldnames):
     url = 'http://maoyan.com/board/4?offset={0}'.format(offset)
     html = get_one_page(url)
     rows = []
@@ -70,12 +71,12 @@ def main(offset, csv_title):
         # print(item)
         # write_to_txtFile(item)
         rows.append(item)
-    write_to_csvRows(rows, csv_title)
+    write_to_csvRows(rows, fieldnames)
 
 
 if __name__ == "__main__":
-    csv_title = ["index", "image", "title", "actor", "time", "score"]
-    write_to_csvField(csv_title)
+    fieldnames = ["index", "image", "title", "actor", "time", "score"]
+    write_to_csvField(fieldnames)
     for i in range(10):
-        main(offset=i * 10, csv_title=csv_title)
+        main(offset=i * 10, fieldnames=fieldnames)
         time.sleep(1)
