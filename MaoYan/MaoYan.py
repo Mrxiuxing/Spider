@@ -1,11 +1,12 @@
 import re
+import csv
 import time
 import json
 import requests
 from requests.exceptions import RequestException
 
 
-# 抓取
+# 抓取单页
 def get_one_page(url):
     try:
         headers = {
@@ -40,23 +41,41 @@ def parse_one_page(html):
         }
 
 
-# 写入文件
-def write_to_file(content):
-    with open('result.txt', 'a', encoding='utf-8') as f:
-        print(type(json.dumps(content)))
+# 写入txt文件
+def write_to_txtFile(content):
+    with open('MovieTop100.txt', 'a', encoding='utf-8') as f:
+        # print(type(json.dumps(content)))
         f.write(json.dumps(content, ensure_ascii=False) + '\n')
 
 
-def main(offset):
-    url = 'http://maoyan.com/board/4?offset=' + str(offset)
-    # print(url)
+# 写入CSV文件表头
+def write_to_csvField(filename):
+    with open("MovieTop100.csv", 'a', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, filename)
+        writer.writeheader()
+
+
+# 写入CSV文件内容
+def write_to_csvRows(content, filename):
+    with open("MovieTop100.csv", 'a', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, filename)
+        writer.writerows(content)
+
+
+def main(offset, csv_title):
+    url = 'http://maoyan.com/board/4?offset={0}'.format(offset)
     html = get_one_page(url)
+    rows = []
     for item in parse_one_page(html):
-        print(item)
-        write_to_file(item)
+        # print(item)
+        # write_to_txtFile(item)
+        rows.append(item)
+    write_to_csvRows(rows, csv_title)
 
 
 if __name__ == "__main__":
+    csv_title = ["index", "image", "title", "actor", "time", "score"]
+    write_to_csvField(csv_title)
     for i in range(10):
-        main(offset=i * 10)
-        time.sleep(2)
+        main(offset=i * 10, csv_title=csv_title)
+        time.sleep(1)
