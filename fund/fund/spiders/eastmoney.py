@@ -18,9 +18,9 @@ class EastmoneySpider(scrapy.Spider):
     def parse_info(self, response):
         item = FundItem()
         try:
-            item['code'] = response.xpath('//*[@class="fundcodeInfo"]/span[1]/text()').extract_first()    # 基金代码
+            item['code'] = response.xpath('//*[@class="fundcodeInfo"]/span[1]/text()').extract()[0]    # 基金代码
         except:
-            item['code'] = response.xpath('//*[@class="fundDetail-tit"]/div/span[2]/text()').extract_first()
+            item['code'] = response.xpath('//*[@class="fundDetail-tit"]/div/span[2]/text()').extract()[0]
         item['name'] = response.xpath('//*[@class="fundDetail-tit"]/div[1]/text()').extract()[0]     # 基金名称
         item['service_Charge'] = response.xpath('//*[@class="buyWayStatic"]/div[5]/span[2]/span[2]/text()').extract_first('暂停申购')   # 手续费
         item['purchase_amount'] = response.xpath('//*[@id="moneyAmountTxt"]/@data-placeholder').extract_first('暂停申购')    # 起购金额
